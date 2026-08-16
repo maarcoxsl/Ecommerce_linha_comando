@@ -13,8 +13,8 @@ def Pagar(total_compra):
 
 while True:
     print('Progama iniciado !!')
-    Iniciar = input('Digite i para encerrar o progama ou qualquer comando para prosseguir: ')
-    if Iniciar == 'i':
+    Iniciar = input('Digite ok para encerrar o progama ou qualquer comando para prosseguir: ').upper()
+    if Iniciar == 'ok'.upper():
        print('Progama encerrado')
        break
     print('Bem vindo ao ecommerce-X')
