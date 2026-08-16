@@ -1,4 +1,16 @@
 # Back end de ecommerce 
+def Pagar(total_compra):
+            metodo_pagamento = input('Como deseja realizar o pagamento desta compra\n obs: pagamentos no cartão com acrescimo de 50 reais ').strip()
+            if metodo_pagamento == 'cartão':
+                conta_final = total_compra + 50
+                print(f'Valor de sua compra: {conta_final}')
+            elif metodo_pagamento == 'dinheiro':
+                 pagamento_dinheiro = total_compra - 50
+
+                 print(f'Total da sua compra: {pagamento_dinheiro}')
+            else:
+                print('Formação informada não existe')
+
 while True:
     print('Progama iniciado !!')
     Iniciar = input('Digite i para encerrar o progama ou qualquer comando para prosseguir: ')
@@ -18,28 +30,37 @@ while True:
         total_compra = quantidade * Tv_valor
 
         print(f'Valor da compra: {total_compra}')
+        Pagar(total_compra=Tv_valor)
         
-        def Pagar(total_compra):
-            metodo_pagamento = input('Como deseja realizar o pagamento desta compra\n obs: pagamentos no cartão com acrescimo de 50 reais ').strip()
-            if metodo_pagamento == 'cartão':
-                conta_final = total_compra + 50
-                print(f'Valor de sua compra: {conta_final}')
-            elif metodo_pagamento == 'dinheiro':
-                 pagamento_dinheiro = total_compra - 50
-            else:
-                print('Formação informada não existe')
-
-              
-
-        Pagar(total_compra)
-        
-
+        Pagar(total_compra)        
     elif escolha in lista_compra[1]:
-        print(f'Produto escolhido: {lista_compra[1]}')
+         print(f'Produto escolhido: {lista_compra[1]}')
+
+         print(f'Produto escolhido: {lista_compra[1]}')
+         controle_valor = 150.00
+         quantidade = int(input('Quantos produtos você deseja comprar\nEscolha um numeros de 1 a 5'))
+         if quantidade >= 0 and quantidade <= 5:
+            total_compra = quantidade * controle_valor
+            Pagar(total_compra=controle_valor)
     elif escolha in lista_compra[2]:
-        print(f'Produto escolhido: {lista_compra[2]}')  
+         print(f'Produto escolhido: {lista_compra[2]}')  
+
+         print(f'Produto escolhido: {lista_compra[2]}')
+         video_game_valor = 1150.00
+         quantidade = int(input('Quantos produtos você deseja comprar\nEscolha um numeros de 1 a 5'))
+         if quantidade >= 0 and quantidade <= 5:
+            total_compra = quantidade * video_game_valor
+            Pagar(total_compra)
+            Pagar(total_compra=video_game_valor)
     elif escolha in lista_compra[3]:
-        print(f'Produto escolhido: {lista_compra[3]}')         
+         print(f'Produto escolhido: {lista_compra[3]}')  
+
+         print(f'Produto escolhido: {lista_compra[3]}')
+         camisa_valor = 50.00
+         quantidade = int(input('Quantos produtos você deseja comprar\nEscolha um numeros de 1 a 5'))
+         if quantidade >= 0 and quantidade <= 5:
+            total_compra = quantidade * camisa_valor     
+            Pagar(total_compra=camisa_valor)  
     else:
         print('produto inexistente')
     
